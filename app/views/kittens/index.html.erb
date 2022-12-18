@@ -1,2 +1,8 @@
-<h1>Kittens#index</h1>
-<p>Find me in app/views/kittens/index.html.erb</p>
+<h1>List of Kitten</h1>
+<%= link_to 'New Kitten', new_kitten_path %>
+<% @kittens.reverse.each do |kit| %>
+  <h2>Name: <%= link_to kit.name, kit %></h2>
+  <p>Age: <%= kit.age %></p>
+  <p>Cuteness: <%= kit.cuteness %></p>
+  <p>Softness: <%= kit.softness %> </p>
+<% end %>
