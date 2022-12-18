@@ -40,9 +40,9 @@ class KittensController < ApplicationController
 
     if @kitten.update(app_params)
       redirect_to @kitten, notice: "Cat succesfully edited!"
-     else
+    else
       render :edit, status: :unprocessable_entity
-     end
+    end
   end
 
   def destroy
